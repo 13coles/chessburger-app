@@ -1,0 +1,9 @@
+# Ignore configuration files
+config.php
+
+# Ignore database files
+database/food_db (4).sql
+# Ignore VS Code settings
+.vscode/
+
+

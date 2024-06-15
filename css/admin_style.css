@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root{
+   --main-color:#e312ea;
+   --red:#e74c3c;
+   --green:#55ff06;
+   --black:#050505;
+   --white:#fff;
+   --light-bg:#f5f5f5;
+   --light-color:#000000;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none; border:none;
+}
+
+*::selection{
+   color:var(--white);
+   background-color: var(--main-color);
+}
+
+::-webkit-scrollbar{
+   width: 1rem;
+   height: .5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background-color: var(--white);
+   /* padding-bottom: 7rem; */
+}
+
+section{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   width: 100%;
+   font-size: 1.8rem;
+   color:var(--white);
+   padding:1.2rem 3rem;
+   text-transform: capitalize;
+   text-align: center;
+   transition: transform 0.3s;
+}
+
+.btn{
+   background-color: var(--main-color);
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.delete-btn{
+   background-color: var(--red);
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.option-btn{
+   background-color: var(--main-color);
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   transform: scale(0.9); 
+}
+
+.flex-btn{
+   display: flex;
+   gap:1rem;
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--green);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   justify-content: space-between;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   color:var(--red);
+   cursor: pointer;
+}
+
+.message i:hover{
+   color:var(--black);
+}
+
+.heading{
+   text-align: center;
+   margin-bottom: 2rem;
+   text-transform: capitalize;
+   color:var(--black);
+   font-size: 3rem;
+}
+
+.empty{
+   border:var(--border);
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding:1.5rem;
+   text-align: center;
+   width: 100%;
+   font-size: 2rem;
+   text-transform: capitalize;
+   color:var(--red);
+   box-shadow: var(--box-shadow);
+}
+
+/*form container styles*/
+.form-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 400px;
+   margin: 50px auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+   background-color: var(--white);
+   border-radius: .5rem;
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   padding: 2rem;
+   text-align: center;
+   width: 50rem;
+}
+
+.form-container form h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+}
+
+.form-container form p {
+   margin: 1rem 0;
+   font-size: 2rem;
+   color: var(--light-color);
+}
+
+.form-container form p span {
+   color: var(--main-color);
+}
+
+.form-container form .box {
+   width: 100%;
+   background-color: var(--light-bg);
+   padding: 1.4rem;
+   font-size: 1.4rem;
+   color: var(--black);
+   margin: 1rem 0;
+   border: var(--border);
+   font-size: 1.8rem;
+   border-radius: .5rem;
+}
+
+/* Input Styles */
+.form-container .box {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+}
+
+/* Select Styles */
+.form-containerselect {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+}
+
+/* Password Strength Indicator Styles */
+#password-strength {
+   margin: 10px 0;
+   font-size: 14px;
+}
+
+/* Warning Styles */
+.warning {
+   color: #d9534f;
+   background-color: #f2dede;
+   border: 1px solid #ebccd1;
+   border-radius: 4px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+
+/* Header Styles */
+.header {
+   position: sticky; 
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   z-index: 1000;
+   border-bottom: var(--border);
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem; 
+}
+ 
+.header .flex {
+   display: flex;
+   align-items: center;
+   width: 100%; /* Ensure the flex container takes full width */
+   justify-content: space-between; /* Distribute space between logo, navbar, and icons */
+}
+
+.header .flex .logo {
+   font-size: 3rem;
+   color: var(--black);
+   text-align: left;
+   margin-right: 10px;
+   float: left; 
+}
+
+.header .flex .logo span {
+   color: var(--main-color);
+   font-size: 3rem;
+   text-align: left;
+   margin-right: 20px;
+}
+
+.header .flex .navbar {
+   text-align: center; /* Center the navigation */
+   flex-grow: 1; /* Allow the navigation to grow and take remaining space */
+}
+
+.header .flex .navbar a {
+   margin: 0 1rem;
+   font-size: 2.5rem;
+   color: var(--light-color);
+   text-decoration: none;
+   margin-left: 20px;
+}
+
+.header .flex .navbar a:hover {
+   color: var(--main-color);
+}
+
+.header .flex .icons {
+   float: right; 
+}
+
+.header .flex .icons > * {
+   font-size: 2.5rem;
+   cursor: pointer;
+   margin-left: 20px;
+}
+
+.header .flex .icons > *:hover {
+   color: var(--main-color);
+}
+
+.header .flex .profile {
+   position: absolute;
+   top: 125%;
+   right: 2rem;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+   border-radius: 0.5rem;
+   padding: 2rem;
+   padding-top: 1rem;
+   width: 30rem;
+   display: none;
+   animation: fadeIn 0.2s linear;
+   text-align: center;
+}
+
+.header .flex .profile p {
+   margin-bottom: 1rem;
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.header .flex .profile.active {
+   display: inline-block;
+}
+
+
+
+ 
+
+#menu-btn{
+   display: none;
+}
+
+/* dashbaord Styles */
+/* Main Container Styles */
+/* Style for the Dashboard Section */
+.dashboard {
+   background-color: #ffffff;
+   padding: 20px;
+ }
+ 
+ /* Heading Style */
+ .dashboard .column .card h3 ,span {
+   font-size: 20px;
+   margin: 10px;
+ }
+ .dashboard h2 {
+   font-size: 24px;
+   margin-bottom: 20px;
+ }
+ 
+ /* Row Style (Columns Container) */
+ .dashboard .row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 0 -10px;
+ }
+
+ /* Individual Column */
+ .dashboard .column {
+   flex: 1;
+  margin: 0 10px;
+ }
+ 
+ /* Card Styling */
+ .dashboard .card {
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ /* Card Button */
+ .dashboard .card .btn {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: var(--main-color);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   margin-top: 10px;
+   transition: background-color 0.3s;
+ }
+ 
+/* Style for the Charts Container */
+.leftcolumn {
+   float: left;
+   width: 65%;
+
+ }
+ 
+ /* Style for the Chart Cards */
+ .leftcolumn .card {
+   margin-right: 10px;
+   margin-left: 10px;
+   padding: 10px;
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   margin-bottom: 10px;
+   font-size: 12px;
+   position: relative;
+ }
+
+/* Styles for Table Reservation (Right Column) */
+.rightcolumn {
+   float: right;
+   width: 35%;
+   height: auto;
+
+}
+ 
+ /* Style for the Table Card */
+ .rightcolumn .card {
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   padding: 10px;
+   margin-bottom: 5px;
+   margin-right: 10px;
+ }
+
+ /* Style for the Table Boxes */
+ .rightcolumn .table-box {
+   background-color: green; /* Green for available */
+   color: white;
+   padding: 8px 5px;
+   border-radius: 5px;
+   margin-top: 5px;
+ }
+ 
+ .rightcolumn .table-box-occupied {
+   background-color: red; /* Red for occupied */
+ }
+ 
+ /* Style button and text*/
+ .status {
+   margin-bottom: 10px;
+   margin: 0;
+   padding: 12px 20px;
+   border-radius: 5px;
+   background-color: rgba(0, 0, 0, 0.5);
+   transition: background-color 0.3s;
+ }
+
+ .status a {
+   font-size: 12px;
+   border-radius: 5px;
+   transition: background-color 0.3s;
+ }
+
+ .status:hover, .status a:hover {
+   background-color: rgba(0, 0, 0, 0.7);
+   text-decoration: underline;
+}
+
+ .text{
+   font-size: 12px;
+   text-align: left;
+   margin-top: 10px;
+   margin-left: 10px;
+ }
+.chart-container {
+   width: 80%;
+   margin: 0 auto;
+}
+.view-all {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   text-decoration: none;
+   color: #007bff;
+   font-size: 14px;
+}
+
+.view-all:hover{
+   color: var(--main-color);
+}
+
+
+/* products pages styles */
+
+.add-products form{
+   margin:0 auto;
+   max-width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:2rem;
+   text-align: center;
+}
+
+.add-products form h3{
+   margin-bottom: 1rem;
+   font-size: 2.5rem;
+   color:var(--black);
+   text-transform: capitalize;
+}
+
+.add-products form .box{
+   background-color: var(--light-bg);
+   border:var(--border);
+   width: 100%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   margin: 1rem 0;
+}
+
+.show-products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.show-products .box-container .box{
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:1.5rem;
+}
+
+.show-products .box-container .box img{
+   width: 100%;
+   height: 20rem;
+   object-fit: contain;
+   margin-bottom: 1rem;
+}
+
+.show-products .box-container .box .name{
+   font-size: 2rem;
+   color:var(--black);
+   padding:1rem 0;
+}
+
+.show-products .box-container .box .flex{
+   display: flex;
+   align-items: center;
+   gap:1rem;
+   justify-content: space-between;
+}
+
+.show-products .box-container .box .flex .category{
+   font-size: 1.8rem;
+   color:var(--main-color);
+}
+
+.show-products .box-container .box .flex .price{
+   font-size: 2rem;
+   color:var(--black);
+   margin:.5rem 0;
+}
+
+.show-products .box-container .box .flex .price span{
+   font-size: 1.5rem;
+}
+
+/* Style for Update and Delete Buttons */
+.show-products .box-container .box .flex-btn .option-btn, .flex-btn .delete-btn{
+   padding: 10px 15px;
+   text-align: center;
+   text-decoration: none;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   font-size: 14px;
+   margin-right: 10px;
+}
+
+.show-products .box-container .box .flex-btn .option-btn {
+   background-color: var(--main-color);
+   color: #fff;
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.show-products .box-container .box .flex-btn .option-btn:hover {
+   transform: scale(0.9); 
+}
+
+.show-products .box-container .box .flex-btn .delete-btn{
+   background-color: var(--red);
+   color: #fff;
+   transition: transform 0.3s;
+   cursor: pointer;
+}
+
+.show-products .box-container .box .flex-btn .delete-btn:hover {
+   transform: scale(0.9); 
+}
+
+.update-product form{
+   margin:0 auto;
+   max-width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:2rem;
+}
+
+.update-product form img{
+   height: 25rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.update-product form .box{
+   background-color: var(--light-bg);
+   border:var(--border);
+   width: 100%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   margin: 1rem 0;
+}
+
+.update-product form textarea{
+   height: 15rem;
+   resize: none;
+}
+
+.update-product form span{
+   font-size: 1.7rem;
+   color:var(--black);
+}
+
+
+
+/* Place orders styles */
+.placed-orders form {
+   margin-bottom: 20px;
+}
+
+/* Style the label */
+.placed-orders label {
+   font-weight: bold;
+   margin-right: 10px;
+   font-size: 12px;
+
+}
+
+/* Style the select dropdown */
+.placed-orders select {
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   background-color: #fff;
+   font-size: 12px;
+}
+
+/* Style the submit button */
+.placed-orders input[type="submit"] {
+   padding: 5px 10px;
+   background-color: var(--main-color);
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   transition: transform 0.3s;
+   font-size: 12px;
+}
+
+/* Change the cursor to a pointer when hovering over the submit button */
+.placed-orders input[type="submit"]:hover {
+   transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+/* Style the table */
+.placed-orders .order-table {
+   width: 100%;
+   border-collapse: collapse;
+ 
+}
+
+.placed-orders .order-table th, .order-table td {
+   border: 1px solid var(--black);
+   padding: 8px; /* Adjust the padding as needed */
+   text-align: left;
+   font-size: 12px; /* Adjust the font size as needed */
+   width: auto; 
+}
+
+.placed-orders .order-table td {
+   color: var(--black);
+}
+
+.placed-orders .order-table th {
+   background-color: var(--main-color);
+   color: #fff;
+   font-size: 14px;
+}
+
+.placed-orders .order-table tr:nth-child(even) {
+   background-color: #f2f2f2;
+}
+
+
+/* Add a hover effect to table rows */
+.placed-orders .order-table tr:hover {
+   background-color: #e5e5e5;
+   cursor: pointer;
+}
+
+/* Style the order status dropdown */
+.placed-orders .drop-down {
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   background-color: #fff;
+   width: 100%;
+   font-size: 12px;
+}
+
+/* Style the update and delete buttons */
+.placed-orders  .flex-btn {
+   display: flex;
+   align-items: center;
+}
+
+.placed-orders  .btn{
+   margin-right: 10px;
+   padding: 5px 10px;
+   text-align: center;
+   text-decoration: none;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   font-size: 12px;
+}
+.placed-orders .remove-btn{
+   margin-right: 10px;
+   margin-top: 10px;
+   padding: 5px 10px;
+   text-align: center;
+   text-decoration: none;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   font-size: 12px;
+}
+
+.placed-orders  .btn {
+   background-color: var(--main-color);
+   color: #fff;
+   transition: transform 0.3s;
+}
+
+ .remove-btn{
+   background-color: var(--red);
+   color: #fff;
+   transition: transform 0.3s;
+}
+
+/* Add a zoom-in effect on hover for buttons */
+.remove-btn:hover {
+   transform: scale(1.1);
+}
+
+
+.placed-orders .bold-text {
+   font-weight: bold; /* Make the text bolder */
+
+
+}
+
+
+
+
+
+
+.accounts .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.accounts .box-container .box{
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:2rem;
+   padding-top: 1rem;
+   text-align: center;
+}
+
+.accounts .box-container .box p{
+   padding: .5rem 0;
+   font-size: 1.8rem;
+   color:var(--black);
+}
+
+.accounts .box-container .box p span{
+   color:var(--main-color);
+}
+
+
+/* Feedbacks Styles */
+.feedbacks {
+   max-width: 800px;
+   margin: 20px auto;
+}
+
+.card {
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   position: relative; /* Added for positioning the trash button */
+}
+
+.card-body {
+   padding: 15px;
+}
+
+.card-title {
+   font-size: 1.25rem;
+   margin-bottom: 5px;
+}
+
+.card-subtitle {
+   font-size: 1rem;
+   color: #6c757d;
+   margin-bottom: 10px;
+}
+
+.card-text {
+   margin-bottom: 15px;
+}
+
+.btn-link {
+   font-size: 0.875rem;
+   cursor: pointer;
+   color: #007bff;
+   padding: 0;
+}
+
+.message-content {
+   display: none;
+   margin-top: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   background-color: #f5f5f5;
+}
+
+.btn-trash {
+   font-size: 18px; /* Increased font size for better readability */
+   cursor: pointer;
+   color: #fff;
+   background-color: #dc3545;
+   border: 1px solid #dc3545;
+   padding: 10px 8px; /* Adjusted padding for a more compact button */
+   border-radius: 4px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+}
+
+.btn-trash:hover {
+   background-color: #c82333;
+   border: 1px solid #c82333;
+}
+
+.empty {
+   text-align: center;
+   color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      position: absolute;
+      top:99%; left:0; right:0;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--white);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap:0;
+   }
+
+   .heading{
+      font-size: 3rem;
+   }
+
+   .show-products .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .placed-orders .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .accounts .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}
