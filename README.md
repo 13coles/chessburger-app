@@ -17,9 +17,9 @@ This project is an ordering application designed for cafes. It allows customers 
 
 - **Mobile Responsive Design**: Works seamlessly on mobile devices.
 - **Order Management**: Customers can browse the menu, place orders, and customize items.
-- **Reservation System**: Customers can book tables in advance.
-- **Payment Gateway**: Secure online payments through integrated payment gateways.
-- **Sales Analytics**: Detailed sales reports and analytics.
+- **Reservation System**: Customers can order foods and book tables in advance upon placing orders.
+- **Payment Gateway**: Diverse payment options like COD, pay in cafe and Gcash QR code.
+- **Sales Analytics**: Detailed sales report and analytics.
 - **Forecasting**: Predictive analytics for future sales trends.
 - **Management Tools**: Admin dashboard for managing menu items, orders, reservations, and sales data.
 
