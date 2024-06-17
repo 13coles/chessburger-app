@@ -38,6 +38,11 @@ Project Link: [GitHub Repository]([https://github.com/13coles/chessburger-app](h
 
 ## Acknowledgements
 
-- [Composer](https://getcomposer.org/)
-- [PHP](https://www.php.net/)
-- other libraies included my libraries file.
+- [Composer](https://getcomposer.org/) - Dependency manager for PHP.
+- [PHP](https://www.php.net/) - Server-side scripting language used for backend development.
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Standard markup language for creating web pages.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Cascading Style Sheets for styling web pages.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Programming language used for client-side scripting.
+- [jQuery](https://jquery.com/) - Fast, small, and feature-rich JavaScript library.
+- [PHP-ML](https://php-ml.org/) - Machine Learning library for PHP.
+- [Swiper.js](https://swiperjs.com/) - JavaScript library for modern touch sliders and carousels.
