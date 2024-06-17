@@ -34,7 +34,7 @@ This project is an ordering application designed for cafes. It allows customers 
 
 Developer Name - [[@dev_eric](https://x.com/x_jstme)]
 
-Project Link: [GitHub Repository]([https://github.com/13coles/chessburger-app](https://github.com/13coles/chessburger-app/tree/master))
+Project Link: [GitHub Repository]([https://github.com/13coles/chessburger-app](https://github.com/13coles/chessburger-app))
 
 ## Acknowledgements
 
