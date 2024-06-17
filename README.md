@@ -32,7 +32,7 @@ This project is an ordering application designed for cafes. It allows customers 
 
 ## Contact
 
-Your Name - [[@dev_eric](https://x.com/x_jstme)]
+Developer Name - [[@dev_eric](https://x.com/x_jstme)]
 
 Project Link: [GitHub Repository]([https://github.com/13coles/chessburger-app](https://github.com/13coles/chessburger-app/tree/master))
 
@@ -40,4 +40,4 @@ Project Link: [GitHub Repository]([https://github.com/13coles/chessburger-app](h
 
 - [Composer](https://getcomposer.org/)
 - [PHP](https://www.php.net/)
-- other libraies included my libraies file.
+- other libraies included my libraries file.
