@@ -6,6 +6,7 @@ A mobile-responsive web application for cafes that includes ordering, reservatio
 
 - [Description](#description)
 - [Features](#features)
+- [Prerequisites](#prerequisites)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
@@ -17,13 +18,13 @@ This project is an ordering application designed for cafes. It allows customers 
 
 - **Mobile Responsive Design**: Works seamlessly on mobile devices.
 - **Order Management**: Customers can browse the menu, place orders, and customize items.
-- **Reservation System**: Customers can order foods and book tables in advance upon placing orders.
-- **Payment Gateway**: Diverse payment options like COD, pay in cafe and Gcash QR code.
-- **Sales Analytics**: Detailed sales report and analytics.
+- **Reservation System**: Customers can order food and book tables in advance upon placing orders.
+- **Payment Gateway**: Diverse payment options like COD, pay in cafe, and Gcash QR code.
+- **Sales Analytics**: Detailed sales reports and analytics.
 - **Forecasting**: Predictive analytics for future sales trends.
 - **Management Tools**: Admin dashboard for managing menu items, orders, reservations, and sales data.
 
-### Prerequisites
+## Prerequisites
 
 - PHP (>= 8.2.4)
 - Composer
@@ -32,9 +33,9 @@ This project is an ordering application designed for cafes. It allows customers 
 
 ## Contact
 
-Developer Name - [[@dev_eric](https://x.com/x_jstme)]
+Developer Name - [@dev_eric](https://x.com/x_jstme)
 
-Project Link: [GitHub Repository(https://github.com/13coles/chessburger-app)]
+Project Link: [GitHub Repository](https://github.com/13coles/chessburger-app)
 
 ## Acknowledgements
 
